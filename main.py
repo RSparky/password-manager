@@ -11,7 +11,7 @@ def create_password():
     numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-    #list comprehension 
+    #list comprehension adding
     password_list = [choice(letters) for _ in range(randint(8, 10))]
     password_list+=[choice(symbols) for _ in range(randint(2, 4))]
     password_list+=[choice(numbers) for _ in range(randint(2, 4))]
@@ -33,19 +33,6 @@ def save_the_data():
         }
     }
 
-    # if len(website)==0 or len(user)==0 or len(password_given)==0: 
-    #     messagebox.showerror(title="Oops", message="Please don't leave any fields empty!")
-    # else:
-    #     is_ok = messagebox.askokcancel(title=website, message=f"You have entered \n Email: {user} \n Password: {password_given}" 
-    #                                                             f"\n Is it Okay to Save it?")
-        # if is_ok:
-        # #   with open("data.txt","a") as data:
-        #         data.write(f"{website}|{user}|{password_given}\n")
-        #         website_name_entry.delete(0, END)
-        #         password_entry.delete(0,END)         
-    
-    
-    #JSON data file creation here
     try:
         with open("data.json", "r") as data_file:
             data = json.load(data_file)
