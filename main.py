@@ -32,7 +32,6 @@ def save_the_data():
             "Password": password_given
         }
     }
-
     try:
         with open("data.json", "r") as data_file:
             data = json.load(data_file)
